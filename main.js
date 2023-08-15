@@ -12,17 +12,25 @@ const salaDeJuegosSeleccionada = prompt("Desea alquilar la sala de juegos? (si/n
 // Calcular el costo total
 let costoTotal = 0;
 
-if (alquilerSeleccionado === "si") {
+if ((alquilerSeleccionado === "si") || (alquilerSeleccionado === "Si")) {
     costoTotal += precioAlquiler;
+}else{
+    alert("Haz seleccionado no alquilar habitacion")
 }
-if (desayunoSeleccionado === "si") {
+if ((desayunoSeleccionado === "si") || (desayunoSeleccionado === "Si")){
     costoTotal += precioDesayuno;
+}else{
+    alert("Haz seleccionado que no quieres desayuno")
 }
-if (transporteSeleccionado === "si") {
+if ((transporteSeleccionado === "si") || (transporteSeleccionado === "Si")){
     costoTotal += precioTransporte;
+}else{
+    alert("Haz seleccionado que no quieres transporte")
 }
-if (salaDeJuegosSeleccionada === "si") {
+if ((salaDeJuegosSeleccionada === "si") || (salaDeJuegosSeleccionada === "si")) {
     costoTotal += precioSalaDeJuegos;
+}else{
+    alert("Haz seleccionado no alquilar la sala de juegos")
 }
 if ((alquilerSeleccionado === "no") && (desayunoSeleccionado === "no") && (transporteSeleccionado === "no") && (salaDeJuegosSeleccionada === "no")){
     alert("Es bienvenido cuando quiera contratar nuestros servicios")
