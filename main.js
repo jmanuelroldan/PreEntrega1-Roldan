@@ -11,29 +11,31 @@ const transporteSeleccionado = prompt("Desea contratar transporte para excursion
 const salaDeJuegosSeleccionada = prompt("Desea alquilar la sala de juegos? (si/no)")
 // Calcular el costo total
 let costoTotal = 0;
-
+function seleccionDelUsuario(){
 if ((alquilerSeleccionado === "si") || (alquilerSeleccionado === "Si")) {
     costoTotal += precioAlquiler;
 }else{
     alert("Haz seleccionado no alquilar habitacion")
-}
+};
 if ((desayunoSeleccionado === "si") || (desayunoSeleccionado === "Si")){
     costoTotal += precioDesayuno;
 }else{
     alert("Haz seleccionado que no quieres desayuno")
-}
+};
 if ((transporteSeleccionado === "si") || (transporteSeleccionado === "Si")){
     costoTotal += precioTransporte;
 }else{
     alert("Haz seleccionado que no quieres transporte")
-}
+};
 if ((salaDeJuegosSeleccionada === "si") || (salaDeJuegosSeleccionada === "si")) {
     costoTotal += precioSalaDeJuegos;
 }else{
     alert("Haz seleccionado no alquilar la sala de juegos")
-}
+};
 if ((alquilerSeleccionado === "no") && (desayunoSeleccionado === "no") && (transporteSeleccionado === "no") && (salaDeJuegosSeleccionada === "no")){
     alert("Es bienvenido cuando quiera contratar nuestros servicios")
+};
+alert("El costo total sera de: $" + costoTotal);
 }
 // Resultado
-alert("El costo total sera de: $" + costoTotal);
+seleccionDelUsuario();
