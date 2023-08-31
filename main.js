@@ -1,41 +1,24 @@
-// Precios de los productos/servicios
-const precioAlquiler = 1500;
-const precioDesayuno = 500;
-const precioTransporte = 200;
-const precioSalaDeJuegos = 200;
-
-// Selecciones del usuario
-const alquilerSeleccionado = prompt("Desea alquilar habitacion? (si/no)")
-const desayunoSeleccionado = prompt("Desea contratar servicio de desayuno? (si/no)")
-const transporteSeleccionado = prompt("Desea contratar transporte para excursiones? (si/no)")
-const salaDeJuegosSeleccionada = prompt("Desea alquilar la sala de juegos? (si/no)")
-// Calcular el costo total
-let costoTotal = 0;
-function seleccionDelUsuario(){
-if ((alquilerSeleccionado === "si") || (alquilerSeleccionado === "Si")) {
-    costoTotal += precioAlquiler;
-}else{
-    alert("Haz seleccionado no alquilar habitacion")
-};
-if ((desayunoSeleccionado === "si") || (desayunoSeleccionado === "Si")){
-    costoTotal += precioDesayuno;
-}else{
-    alert("Haz seleccionado que no quieres desayuno")
-};
-if ((transporteSeleccionado === "si") || (transporteSeleccionado === "Si")){
-    costoTotal += precioTransporte;
-}else{
-    alert("Haz seleccionado que no quieres transporte")
-};
-if ((salaDeJuegosSeleccionada === "si") || (salaDeJuegosSeleccionada === "si")) {
-    costoTotal += precioSalaDeJuegos;
-}else{
-    alert("Haz seleccionado no alquilar la sala de juegos")
-};
-if ((alquilerSeleccionado === "no") && (desayunoSeleccionado === "no") && (transporteSeleccionado === "no") && (salaDeJuegosSeleccionada === "no")){
-    alert("Es bienvenido cuando quiera contratar nuestros servicios")
-};
-alert("El costo total sera de: $" + costoTotal);
+class Reservas{
+    constructor(nombre, dni, numDias){
+    this.nombre = nombre;
+    this.dni = dni;
+    this.numDias = numDias;    
+    this.reserva = []
+} 
 }
-// Resultado
-seleccionDelUsuario();
+function reservar() {
+    const nombre = prompt("ingrese su Nombre");
+    const dni = prompt("ingrese su dni")
+do {
+    numDias = parseInt(prompt("Ingrese el número de días de estadía:"));
+    const reservaExistente = reserva.find(reserva => reserva.dni === dni && reserva.numDias === numDias);
+    if (reservaExistente) {
+      alert("Ya existe una reserva con el mismo DNI y número de días.");
+    }
+  } while (!numDias || reservaExistente);
+  reserva.push(reservar)
+  
+}
+alert("Bienvenido, comencemos con su reserva");
+reservar();
+alert("su reserva fue agedada con exito!");
